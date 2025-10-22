@@ -1,0 +1,136 @@
+/* ===== GENERAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+header {
+  background-color: #00539C;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #003366;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.principal {
+  text-align: center;
+  padding: 40px;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 30px;
+  justify-items: center;
+}
+
+.galeria img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== VIDEOS Y AUDIOS ===== */
+.videos, .audios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+video, audio {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* ===== AUDIO TEXTO Y COLOR ===== */
+.audios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.audios div {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.audios p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#imagen-ampliada {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+#caption {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
